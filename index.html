@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#FFF5F7">
+<title>@comprecomandreia · Achadinhos</title>
+<meta name="description" content="Achadinhos virais do TikTok Shop, testados e aprovados pela Andreia.">
+<meta property="og:title" content="@comprecomandreia · Achadinhos">
+<meta property="og:description" content="Os queridinhos do TikTok Shop, na mão da Andreia.">
+<meta property="og:image" content="andreia.jpeg">
+<meta property="og:type" content="profile">
+<link rel="icon" type="image/jpeg" href="andreia.jpeg">
+<link rel="apple-touch-icon" href="andreia.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg-1: #fff5f7;
+    --bg-2: #ffe8ee;
+    --bg-3: #ffd9e3;
+    --card: #ffffff;
+    --text: #1a1a1a;
+    --text-soft: #6b6b6b;
+    --text-mute: #9a9a9a;
+    --accent: #d14a6a;
+    --accent-soft: #f8e4eb;
+    --ring-1: #ff7eb3;
+    --ring-2: #ffb86b;
+    --ring-3: #c87aff;
+    --shadow-sm: 0 1px 2px rgba(31, 6, 16, 0.06);
+    --shadow-md: 0 6px 18px rgba(31, 6, 16, 0.08);
+    --shadow-lg: 0 12px 32px rgba(31, 6, 16, 0.10);
+  }
+
+  html, body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--text);
+    background:
+      radial-gradient(1200px 600px at 50% -10%, var(--bg-3), transparent 60%),
+      linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
+    min-height: 100vh;
+    min-height: 100dvh;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 32px 20px 56px;
+    padding-top: max(32px, env(safe-area-inset-top));
+    padding-bottom: max(56px, env(safe-area-inset-bottom));
+  }
+
+  /* --- Header / profile --- */
+  .header {
+    text-align: center;
+    margin-bottom: 28px;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .avatar-ring {
+    display: inline-block;
+    padding: 3px;
+    border-radius: 50%;
+    background: conic-gradient(from 45deg, var(--ring-1), var(--ring-2), var(--ring-3), var(--ring-1));
+    margin-bottom: 14px;
+  }
+
+  .avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid var(--bg-1);
+    object-fit: cover;
+    display: block;
+    background: #eee;
+  }
+
+  .handle {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    margin-bottom: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .verified {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background: var(--accent);
+    border-radius: 50%;
+    color: #fff;
+  }
+
+  .bio {
+    font-size: 14.5px;
+    line-height: 1.5;
+    color: var(--text-soft);
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .bio strong { color: var(--text); font-weight: 700; }
+
+  /* --- Section title --- */
+  .section-title {
+    text-align: center;
+    margin: 28px 0 18px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-mute);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .section-title::before,
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #e7c9d1, transparent);
+    max-width: 70px;
+  }
+
+  /* --- Link cards --- */
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .link-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 14px 12px 12px;
+    background: var(--card);
+    border-radius: 18px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #fce7ee;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    will-change: transform;
+    animation: fadeUp 0.5s ease both;
+  }
+
+  .link-card:nth-child(1) { animation-delay: 0.05s; }
+  .link-card:nth-child(2) { animation-delay: 0.10s; }
+  .link-card:nth-child(3) { animation-delay: 0.15s; }
+  .link-card:nth-child(4) { animation-delay: 0.20s; }
+  .link-card:nth-child(5) { animation-delay: 0.25s; }
+
+  @media (hover: hover) {
+    .link-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: #f4c8d2;
+    }
+  }
+
+  .link-card:active {
+    transform: scale(0.985);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .thumb {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    font-size: 28px;
+    background: linear-gradient(135deg, #ffd5e0, #ffe2c7);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  }
+
+  .thumb.t-2 { background: linear-gradient(135deg, #e3d5ff, #ffd5e0); }
+  .thumb.t-3 { background: linear-gradient(135deg, #ffe2c7, #fff4c2); }
+  .thumb.t-4 { background: linear-gradient(135deg, #c9e6ff, #e3d5ff); }
+  .thumb.t-5 { background: linear-gradient(135deg, #d4f5d0, #fff4c2); }
+
+  .link-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .link-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.01em;
+    margin-bottom: 2px;
+    line-height: 1.25;
+  }
+
+  .link-sub {
+    font-size: 12.5px;
+    color: var(--text-soft);
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .link-cta {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+
+  .link-cta svg { width: 16px; height: 16px; }
+
+  /* tag pill (ex: viral, novidade) */
+  .tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 2px 7px;
+    border-radius: 999px;
+    margin-right: 6px;
+    vertical-align: middle;
+    line-height: 1.4;
+  }
+
+  /* --- Footer --- */
+  .footer {
+    text-align: center;
+    margin-top: 36px;
+    font-size: 11.5px;
+    color: var(--text-mute);
+  }
+
+  .footer a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  /* --- Animations --- */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* --- Responsive: desktop --- */
+  @media (min-width: 600px) {
+    .container { padding-top: 56px; }
+    .avatar { width: 150px; height: 150px; }
+    .handle { font-size: 21px; }
+    .bio { font-size: 15.5px; }
+    .link-card { padding: 14px 16px 14px 14px; }
+    .thumb { width: 64px; height: 64px; font-size: 32px; border-radius: 16px; }
+    .link-title { font-size: 16px; }
+    .link-sub { font-size: 13px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+  <main class="container">
+
+    <!-- Profile -->
+    <header class="header">
+      <span class="avatar-ring">
+        <img class="avatar" src="andreia.jpeg" alt="Andreia" loading="eager" decoding="async">
+      </span>
+      <div class="handle">
+        @comprecomandreia
+        <span class="verified" aria-hidden="true">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </span>
+      </div>
+      <p class="bio">
+        Achadinhos virais do TikTok Shop ✨<br>
+        <strong>Testados e aprovados</strong> antes de chegar aqui.
+      </p>
+    </header>
+
+    <!-- Section title -->
+    <div class="section-title">achadinhos aqui</div>
+
+    <!-- Links -->
+    <nav class="links" aria-label="Lista de produtos indicados">
+
+      <a class="link-card" href="https://vt.tiktok.com/ZS92eesCWTDjK-335Rl" target="_blank" rel="noopener">
+        <span class="thumb t-1" aria-hidden="true">✨</span>
+        <div class="link-body">
+          <div class="link-title"><span class="tag">viral</span>Achadinho do momento</div>
+          <div class="link-sub">Toque aqui pra ver direto no TikTok</div>
+        </div>
+        <span class="link-cta" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <!-- Cards extras ocultos temporariamente. Pra reativar, descomentar o bloco abaixo. -->
+      <!--
+      <a class="link-card" href="#" target="_blank" rel="noopener">
+        <span class="thumb t-2" aria-hidden="true">🩱</span>
+        <div class="link-body">
+          <div class="link-title">Body sculpt premium</div>
+          <div class="link-sub">Modela a silhueta sem marcar na roupa</div>
+        </div>
+        <span class="link-cta" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a class="link-card" href="#" target="_blank" rel="noopener">
+        <span class="thumb t-3" aria-hidden="true">👗</span>
+        <div class="link-body">
+          <div class="link-title"><span class="tag">novo</span>Vestido midi soltinho</div>
+          <div class="link-sub">Cai bem em qualquer corpo, valoriza tudo</div>
+        </div>
+        <span class="link-cta" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a class="link-card" href="#" target="_blank" rel="noopener">
+        <span class="thumb t-4" aria-hidden="true">💄</span>
+        <div class="link-body">
+          <div class="link-title">Kit maquiagem prática</div>
+          <div class="link-sub">Tudo pra um make rápido no dia a dia</div>
+        </div>
+        <span class="link-cta" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a class="link-card" href="#" target="_blank" rel="noopener">
+        <span class="thumb t-5" aria-hidden="true">🥿</span>
+        <div class="link-body">
+          <div class="link-title"><span class="tag">top</span>Sandália confortável</div>
+          <div class="link-sub">A que todo mundo tá usando, sem doer o pé</div>
+        </div>
+        <span class="link-cta" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+      -->
+
+    </nav>
+
+    <!-- Footer -->
+    <footer class="footer">
+      Feito com 💖 pra Andreia · <a href="https://www.tiktok.com/@comprecomandreia" target="_blank" rel="noopener">@comprecomandreia no TikTok</a>
+    </footer>
+
+  </main>
+</body>
+</html>
