@@ -1,0 +1,27 @@
+services:
+  andreia-links:
+    image: nginx:alpine
+    container_name: andreia-links
+    restart: unless-stopped
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html:ro
+      - ./andreia.jpeg:/usr/share/nginx/html/andreia.jpeg:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=andreia-links-net
+      - traefik.http.routers.andreia-links.rule=Host(`sheraos.com.br`) && PathPrefix(`/compre-com-andreia`)
+      - traefik.http.routers.andreia-links.entrypoints=websecure
+      - traefik.http.routers.andreia-links.tls=true
+      - traefik.http.routers.andreia-links.tls.certresolver=letsencrypt
+      - traefik.http.routers.andreia-links.priority=100
+      - traefik.http.routers.andreia-links.middlewares=andreia-links-strip
+      - traefik.http.middlewares.andreia-links-strip.stripprefix.prefixes=/compre-com-andreia
+      - traefik.http.services.andreia-links.loadbalancer.server.port=80
+    networks:
+      - andreia-links-net
+
+networks:
+  andreia-links-net:
+    name: andreia-links-net
+    driver: bridge
